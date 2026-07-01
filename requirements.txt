@@ -1,0 +1,16 @@
+einops
+h5py
+matplotlib
+opencv-python==4.11.0.86
+plotly
+pystackreg
+pytorch_wavelets
+PyYAML
+scikit_learn
+scipy
+scikit-image
+tabulate
+terminaltables
+timm==1.0.15
+thop
+tqdm
