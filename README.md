@@ -1,2 +1,6 @@
-# cscanet
-cacanet
+# CSCANet
+## HyperDehazing Dataset Split
+The HyperDehazing dataset is used as the main paired synthetic hyperspectral dehazing benchmark. It contains 2,000 hazy-clean HSI pairs generated from 100 clean GF-5 scenes by applying 20 haze-thickness maps to each scene. In this project, we follow a fixed split with 1,800 pairs for training and 200 pairs for testing. The data should be organized as HD/train/haze, HD/train/clean, HD/test/haze, and HD/test/clean, where hazy images and clean references are paired by filename order. The training and testing subsets are kept separated to avoid image, crop, or augmented-content overlap between the two sets.
+
+## HyperHazeOff Dataset Split
+For HyperHazeOff, only the HSI subset is used in this project. We use the official synthetic split RSyntHyperPDID for training and validation: hazy training samples are loaded from syn/RSyntHyperPDID/train, validation samples from syn/RSyntHyperPDID/test, and their clean ground truths from syn/RSyntHyperPDID/clear, with each hazy sample paired to the clean image using the filename prefix before the haze-parameter suffix. Final testing is performed on the real paired HSI subset RRealHyperPDID, using real/RRealHyperPDID/HSI/*/*_hazed.npy and the corresponding *_clean.npy files. Each HSI sample has a spatial size of 256 × 256 with 182 spectral bands; RGB images and downstream annotation files are not used in our experiments. Download/project link: https://github.com/iitpvisionlab/hyperhazeoff;
